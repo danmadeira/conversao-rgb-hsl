@@ -2,6 +2,8 @@
 
 Uma classe em PHP com funções para conversão entre os espaços de cores RGB e HSL.
 
+:point_right: Esta classe foi utilizada em [Gradiente no espaço de cores HSL](https://github.com/danmadeira/gradiente-hsl)
+
 ### Referências:
 
 - Ford, A.; Roberts, A. Colour Space Conversions. August 11, 1998. Disponível em: <http://poynton.ca/PDFs/coloureq.pdf>
