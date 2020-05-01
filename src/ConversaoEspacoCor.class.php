@@ -46,9 +46,9 @@ class ConversaoEspacoCor
             }
         }
     
-        $hsl['lightness'] = round($lightness, 2) * 100;
-        $hsl['saturation'] = round($saturation, 2) * 100;
-        $hsl['hue'] = round($hue);
+        $hsl['lightness'] = (int) round($lightness, 2) * 100;
+        $hsl['saturation'] = (int) round($saturation, 2) * 100;
+        $hsl['hue'] = (int) round($hue);
         return $hsl;
     }
 
@@ -75,9 +75,9 @@ class ConversaoEspacoCor
             }
             $sl2 = 2 * $lightness - $sl1;
         
-            $tmpR = $hue + 0.333;
+            $tmpR = $hue + 0.333333333333;
             $tmpG = $hue;
-            $tmpB = $hue - 0.333;
+            $tmpB = $hue - 0.333333333333;
         
             if ($tmpR < 0) {
                 $tmpR = $tmpR + 1;
@@ -100,7 +100,7 @@ class ConversaoEspacoCor
             } elseif (2 * $tmpR < 1) {
                 $red = $sl1;
             } elseif (3 * $tmpR < 2) {
-                $red = $sl2 + ($sl1 - $sl2) * (0.666 - $tmpR) * 6;
+                $red = $sl2 + ($sl1 - $sl2) * (0.666666666666 - $tmpR) * 6;
             } else {
                 $red = $sl2;
             }
@@ -110,7 +110,7 @@ class ConversaoEspacoCor
             } elseif (2 * $tmpG < 1) {
                 $green = $sl1;
             } elseif (3 * $tmpG < 2) {
-                $green = $sl2 + ($sl1 - $sl2) * (0.666 - $tmpG) * 6;
+                $green = $sl2 + ($sl1 - $sl2) * (0.666666666666 - $tmpG) * 6;
             } else {
                 $green = $sl2;
             }
@@ -120,7 +120,7 @@ class ConversaoEspacoCor
             } elseif (2 * $tmpB < 1) {
                 $blue = $sl1;
             } elseif (3 * $tmpB < 2) {
-                $blue = $sl2 + ($sl1 - $sl2) * (0.666 - $tmpB) * 6;
+                $blue = $sl2 + ($sl1 - $sl2) * (0.666666666666 - $tmpB) * 6;
             } else {
                 $blue = $sl2;
             }
@@ -130,9 +130,9 @@ class ConversaoEspacoCor
             $blue = $blue * 255;
         }
     
-        $rgb['red'] = round($red);
-        $rgb['green'] = round($green);
-        $rgb['blue'] = round($blue);
+        $rgb['red'] = (int) round($red);
+        $rgb['green'] = (int) round($green);
+        $rgb['blue'] = (int) round($blue);
         return $rgb;
     }
 
