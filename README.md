@@ -1,4 +1,4 @@
-## Conversão de espaço de cores RGB-HSL
+## Conversão de espaço de cores RGB-HSL-HSV
 
 Uma classe em PHP com funções para conversão entre os espaços de cores RGB, HSL e HSV.
 
